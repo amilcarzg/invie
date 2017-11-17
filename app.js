@@ -24,5 +24,9 @@ function toogleMenu(e) {
 
 }
 
+var bLazy = new Blazy({
+  selector: 'img'
+});
+
 // $menu.classList.add('active')
 // $menu.classList.remove('active')
