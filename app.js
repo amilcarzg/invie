@@ -8,11 +8,11 @@ consulta.addListener(mediaQuery);
 
 function mediaQuery() {
   if (consulta.matches) {
-    console.log("media cumple");
+    // console.log("media cumple");
     $burguerButton.addEventListener("touchstart", toogleMenu);
   } else {
     $burguerButton.removeEventListener("touchstart", toogleMenu);
-    console.log("00");
+    // console.log("00");
   }
 }
 
@@ -40,12 +40,12 @@ var bLazy = new Blazy({
 
 hammertime.on("swipeleft", function(ev) {
   hideMenu();
-  console.log(ev);
+  // console.log(ev);
 });
 
 hammertime.on("swiperight", function(ev) {
   showMenu();
-  console.log(ev);
+  // console.log(ev);
 });
 
 // Font Families
