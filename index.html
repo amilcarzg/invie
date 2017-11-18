@@ -142,12 +142,14 @@
 			</form>
 		</div>
 	</footer>
-	<link href="./css/app.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-	<script type="text/javascript" src="app.min.js"></script>
-
+	<script >
+		function mediaQuery() { consulta.matches ? $burguerButton.addEventListener("touchstart", toogleMenu) : $burguerButton.removeEventListener("touchstart", toogleMenu) } function toogleMenu(e) { $menu.classList.toggle("active"), $burguerButton.classList.toggle("icon-close"), $body.classList.toggle("opened") } function showMenu(e) { $menu.classList.add("active"), $burguerButton.classList.add("icon-close"), $body.classList.add("opened") } function hideMenu(e) { $menu.classList.remove("active"), $burguerButton.classList.remove("icon-close"), $body.classList.remove("opened") } var consulta = window.matchMedia("(max-width:800px)"), $burguerButton = document.getElementById("burger-button"), $menu = document.getElementById("menu"), $body = document.body, hammertime = new Hammer($body); consulta.addListener(mediaQuery), mediaQuery(); var bLazy = new Blazy({ selector: "img" }); hammertime.on("swipeleft", function (e) { hideMenu() }), hammertime.on("swiperight", function (e) { showMenu() }), WebFont.load({ google: { families: ["Montserrat", "Allerta"] } });
+		</script>
+	<!-- <script type="text/javascript" src="app.min.js"></script> -->
+	<link href="./css/app.min.css" rel="stylesheet">
 </body>
 
 </html>
