@@ -4,7 +4,6 @@ var $menu = document.getElementById("menu");
 var $body = document.body;
 var hammertime = new Hammer($body);
 
-
 consulta.addListener(mediaQuery);
 
 function mediaQuery() {
@@ -22,7 +21,7 @@ mediaQuery();
 function toogleMenu(e) {
   $menu.classList.toggle("active");
   $burguerButton.classList.toggle("icon-close");
-  $body.classList.toggle('opened');
+  $body.classList.toggle("opened");
 }
 function showMenu(e) {
   $menu.classList.add("active");
@@ -55,5 +54,3 @@ WebFont.load({
     families: ["Montserrat", "Allerta"]
   }
 });
-// $menu.classList.add('active')
-// $menu.classList.remove('active')
