@@ -545,7 +545,9 @@ textarea {
     align-items: stretch;
   }
   .titulo {
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 35px;
+    margin: 20px;
   }
 
   .guitarra img {
