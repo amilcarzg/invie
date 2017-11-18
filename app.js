@@ -23,10 +23,29 @@ function toogleMenu(e) {
     $burguerButton.classList.toggle('icon-close');
 
 }
+function showMenu(e) {
+  $menu.classList.add("active");
+  $burguerButton.classList.add("icon-close");
+}
+function hideMenu(e) {
+  $menu.classList.remove("active");
+  $burguerButton.classList.remove("icon-close");
+}
 
 var bLazy = new Blazy({
   selector: 'img'
 });
 
+var $body= document.body;
+var hammertime = new Hammer($body);
+hammertime.on("swipeleft", function(ev) {
+  hideMenu();
+    console.log(ev);
+});
+
+hammertime.on("swiperight", function(ev) {
+  showMenu();
+    console.log(ev);
+});
 // $menu.classList.add('active')
 // $menu.classList.remove('active')

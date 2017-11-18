@@ -163,6 +163,9 @@ textarea {
   position: relative;
 }
 
+.header .contenedor {
+  position: static;
+}
 .portada div.contenedor {
   height: 300px;
   display: flex;
@@ -347,6 +350,7 @@ textarea {
   z-index: 3;
   cursor: pointer;
   display: none;
+  color: white;
 }
 
 .burger-buttom :hover {
