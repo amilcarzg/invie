@@ -45,6 +45,7 @@
 }
 .icon-close:before {
   content: "\ea0d";
+  font-size: 40px;
 }
 
 /* Se coloca el contenedor de primero para */
@@ -73,6 +74,10 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+body.opened {
+  overflow: hidden;
 }
 
 table {
@@ -110,6 +115,10 @@ textarea:focus {
 
 textarea {
   width: 90%;
+}
+
+.precios .header .logotipo {
+  margin: 50px 0;
 }
 
 .button {
@@ -183,7 +192,6 @@ textarea {
   color: aliceblue;
   font-size: 24px;
   display: inline-block;
-  position: absolute;
   right: 0;
 }
 
@@ -344,13 +352,13 @@ textarea {
   height: 40px;
   background: #395667;
   text-align: center;
-  position: absolute;
   left: 20px;
   top: 20px;
   z-index: 3;
   cursor: pointer;
   display: none;
   color: white;
+  position: fixed;
 }
 
 .burger-buttom :hover {
@@ -360,8 +368,6 @@ textarea {
 .video-wrapper {
   position: relative;
   padding-top: 56.25%; /* = (height(px)x100)/width(px)*/
-  margin: 15px;
-
 }
 .iframe-responsive {
   position: absolute;
@@ -371,6 +377,12 @@ textarea {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.video-demo {
+  max-width: 600px;
+  margin: 0 auto 70px;
+  border: 2px solid #3c5b6e;
 }
 
 @media screen and (max-width: 800px) {
@@ -490,7 +502,6 @@ textarea {
   }
   .menu {
     background: rgba(255, 60, 88, 0.83);
-    position: absolute;
     top: 0;
     left: -100%;
     bottom: 0;
@@ -502,6 +513,8 @@ textarea {
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
+    position: fixed;
+    overflow: hidden;
   }
 
   .menu.active {
@@ -529,7 +542,7 @@ textarea {
   }
 
   .portada div.contenedor {
-    align-items: center;
+    align-items: stretch;
   }
   .titulo {
     font-size: 30px;
@@ -549,4 +562,14 @@ textarea {
   .burger-buttom {
     display: inline-block;
   }
+
+  .video-demo {
+    margin: 0 10px;
+  }
+  .col2 {
+    align-items: stretch;
+  }
+  /* footer  */
+
+
 }
