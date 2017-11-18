@@ -1,9 +1,10 @@
 var consulta = window.matchMedia("(max-width:800px)");
 var $burguerButton = document.getElementById("burger-button");
 var $menu = document.getElementById("menu");
-
 var $body = document.body;
 var hammertime = new Hammer($body);
+
+
 consulta.addListener(mediaQuery);
 
 function mediaQuery() {
@@ -46,6 +47,13 @@ hammertime.on("swipeleft", function(ev) {
 hammertime.on("swiperight", function(ev) {
   showMenu();
   console.log(ev);
+});
+
+// Font Families
+WebFont.load({
+  google: {
+    families: ["Montserrat", "Allerta"]
+  }
 });
 // $menu.classList.add('active')
 // $menu.classList.remove('active')
