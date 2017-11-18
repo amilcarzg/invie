@@ -55,7 +55,7 @@
   position: relative;
 }
 
-.background {
+.background  {
   background-image: url("../images/background.png");
   background-size: cover;
 }
@@ -186,6 +186,7 @@ textarea {
 .portada {
   color: white;
   padding: 20px;
+  background-color: #273b47;
 }
 
 .menu {
