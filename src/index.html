@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Invi - Se la rockstart</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet"> -->
+	<link href="./css/app.css" rel="stylesheet">
+	<style>
+		@font-face{font-family:"icomoon";src:url(./fonts/icomoon.eot?hoalgc);src:url(./fonts/icomoon.eot?hoalgc#iefix) format("embedded-opentype"),url(./fonts/icomoon.ttf?hoalgc) format("truetype"),url(./fonts/icomoon.woff?hoalgc) format("woff"),url(./fonts/icomoon.svg?hoalgc#icomoon) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]{font-family:"icomoon"!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e9bd"}.contenedor{max-width:800px;margin:0 auto;position:relative}.background{background-image:url(./images/background.png);background-size:cover}.colease{display:inline-block}body{font-family:"Allerta",sans-serif;margin:0;display:flex;flex-direction:column;height:100vh}.button{border-radius:12px;border:none;background:#fd324e;color:#fff;padding:7px 12px;font-size:18px;background:linear-gradient(to left,#fe344e,#ff7250);text-decoration:none;margin-bottom:20px;display:inline-block}.titulo{font-size:70px;margin-bottom:20px;line-height:70px;margin-top:0}.titulo span{text-decoration:underline}.tipo-a{font-family:"Montserrat",sans-serif;font-size:24px;margin-top:0}.guitarras{color:#1f313c;margin-bottom:60px;flex-grow:1;width:100%}.guitarras h2{font-size:35px}.header{position:relative}.portada div.contenedor{height:300px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.portada{color:#fff;padding:20px}.menu{color:#f0f8ff;font-size:24px;display:inline-block;right:0}.menu li{display:inline-block;margin-left:30px}.menu li:before{content:"⦿";font-size:20px;line-height:12px;font-weight:700;margin-right:10px}.menu a{color:#f0f8ff;text-decoration:none}.logotipo{display:inline-block;margin:0}.rigth{float:right;position:relative;top:-164px}.burger-buttom{width:40px;border-radius:50%;line-height:40px;height:40px;background:#395667;text-align:center;left:20px;top:20px;z-index:3;display:none;color:#fff;position:fixed}.video-wrapper{position:relative;padding-top:56.25%}.iframe-responsive{position:absolute;top:0;right:0;bottom:0;left:0;height:100%;width:100%}.video-demo{max-width:600px;margin:0 auto 70px;border:2px solid #3c5b6e}@media screen and (max-width: 800px){.titulo{font-size:45px;margin:0}.portada div.contenedor{height:auto}.guitarras{text-align:center}.rigth{float:none;position:static}}@media screen and (max-width: 710px){.header{text-align:center}.menu{position:static;display:block}.menu li:first-child{margin:0}.menu ul{padding:0}}@media screen and (max-width: 520px){.header{position:static}.menu{background:rgba(255,60,88,0.83);top:0;left:-100%;bottom:0;right:0;z-index:2;display:flex;align-items:center;width:100%;position:fixed;overflow:hidden}.menu ul{flex:1}.menu li{display:block;margin:0;padding:10px 0;border-bottom:1px solid #fff}.menu li:first-child{border-top:1px solid #fff}.menu li::before{display:none}.portada{text-align:center}.portada div.contenedor{align-items:stretch}.titulo{font-size:30px}.guitarra img{width:200px}.guitarras h2{font-size:30px}.burger-buttom{display:inline-block}.video-demo{margin:0 10px}}
+	</style>
+</head>
+
+<body>
+	<!-- Contenido  -->
+	<section id="portada" class="portada background">
+		<header id="header" class="header contenedor">
+			<!-- header -->
+			<figure class="logotipo">
+				<img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
+			</figure>
+			<span class="burger-buttom icon-menu " id="burger-button"></span>
+			<nav class="menu" id="menu">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#guitarras">Guitarras</a>
+					</li>
+					<li>
+						<a href="precios.html">Precios</a>
+					</li>
+				</ul>
+
+			</nav>
+		</header>
+		<div class="contenedor">
+			<h1 class="titulo">Guitarras
+				<span>invie</span>sibles</h1>
+			<!-- titulo -->
+			<h3 class="tipo-a">Sé la estrella de rock que siempre
+				<span class="colease">quisiste ser</span>
+			</h3>
+			<!-- resumen -->
+			<a class="button" href="#guitarras">Conoce más</a>
+		</div>
+		<!-- button -->
+	</section>
+	<!-- Guitarras -->
+	<section id="guitarras" class="guitarras contenedor">
+
+		<h2>Nuestras guitarras</h2>
+		<!-- titulo -->
+		<!-- video -->
+		<div class="video-demo">
+			<div class="video-wrapper ">
+				<iframe class="iframe-responsive" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<!-- Guitarras -->
+		<article id="guitarra" class="guitarra">
+			<!-- guitarra1 -->
+			<img data-src="./images/invie-acustica.png" class="rigth" alt="Guitarra acustica" width="350px">
+			<div class="contenedor-guitarra-a">
+				<h3 class="tipo-b">Invie Acustica</h3>
+				<ol>
+					<li>Estilo vintage</li>
+					<li>Madera pura</li>
+					<li>Incluye estuche inivisble aluminiio</li>
+				</ol>
+			</div>
+		</article>
+		<article class="guitarra b">
+			<!-- guitarra2 -->
+			<img data-src="./images/invie-classic.png" class="left" alt="Guitarra Clasica" width="350px">
+			<div class="contenedor-guitarra-b">
+				<h3 class="tipo-b">Invie Clasic</h3>
+				<ol>
+					<li>Estilo vintage</li>
+					<li>Liviana</li>
+					<li>Inicia tu camino como Rockstart</li>
+				</ol>
+			</div>
+		</article>
+	</section>
+	<footer class="footer">
+		<div class="contenedor">
+			<div class="contacto">
+				<img data-src="./images/invie-white.png" alt="invie-white">
+				<a href="tel:+50762684525">
+					<strong>Telefono</strong>
+					<span>+50762684525</span>
+				</a>
+				<a href="mailto:amilcarzg@gmail.com">
+					<strong>E-Mail:</strong>
+					<span>amilcarzg@gmail.com</span>
+				</a>
+			</div>
+			<form class="formulario">
+				<div class="col1">
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" required nanme="nombre" />
+
+					<label for="email">E-mail</label>
+					<input type="email" id="email" required name="email" />
+
+					<div class="sexo">
+						<label for="mujer">
+							<input type="radio" id="mujer" checked name="sexo" value="mujer"> Mujer
+						</label>
+						<label for="hombre">
+							<input type="radio" id="hombre" name="sexo" value="hombre"> Hombre
+						</label>
+					</div>
+
+					<div class="intereses">
+						<label for="cotizacion">
+							<input type="checkbox" id="cotizacion" checked name="intereses" value="cotizacion"> Cotización
+						</label>
+						<label for="reclamos">
+							<input type="checkbox" id="reclamos" name="intereses" value="intereses">Reclamos
+						</label>
+						<label for="comentario">
+							<input type="checkbox" id="comentario" name="intereses" value="mujer">Comentarios
+						</label>
+						<label for="otros">
+							<input type="checkbox" id="otros" name="intereses">Otros
+						</label>
+					</div>
+				</div>
+				<div class="col2">
+					<label for="comentarios">Comentarios</label>
+					<textarea name="" id="comentarios" rows="5" cols="30" rows="10"></textarea>
+
+					<input type="submit" value="Enviar" class="button" />
+				</div>
+
+			</form>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" async></script>
+	<script type="text/javascript" src="app.js" async></script>
+</body>
+
+</html>
