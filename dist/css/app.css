@@ -1,47 +1,89 @@
-@import "./variables.css";
-@import "./fonts.css";
-@import "./media.css";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?hoalgc");
+  src: url("../fonts/icomoon.eot?hoalgc#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?hoalgc") format("truetype"),
+    url("../fonts/icomoon.woff?hoalgc") format("woff"),
+    url("../fonts/icomoon.svg?hoalgc#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-envelope:before {
+  content: "\e900";
+}
+.icon-mail:before {
+  content: "\e900";
+}
+.icon-email:before {
+  content: "\e900";
+}
+.icon-contact:before {
+  content: "\e900";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-close:before {
+  content: "\ea0d";
+  font-size: 40px;
+}
 /* Se coloca el contenedor de primero para */
 .contenedor {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
-
 .background {
   background-image: url("../images/background.png");
   background-size: cover;
 }
-
 .content {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
-
 .colease {
   display: inline-block;
 }
-
 body {
   font-family: "Allerta", sans-serif;
   margin: 0;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   height: 100vh;
-  &.opened{
+}
+body.opened{
     overflow: hidden;
   }
-}
-
 table {
   width: 100%;
 }
-
 th {
-  background: var(--bgfondo);
+  background: #273b47;
   color: white;
 }
-
 th {
   padding: 10px 20px;
   text-align: left;
@@ -49,14 +91,12 @@ th {
 td {
   padding: 20px;
 }
-
 table,
 td,
 th {
-  border: 1px solid var(--bgfondo);
+  border: 1px solid #273b47;
   border-collapse: collapse;
 }
-
 input,
 textarea {
   outline: 0;
@@ -65,83 +105,72 @@ input:focus,
 textarea:focus {
   background: lightslategrey;
 }
-
 textarea {
   width: 90%;
 }
-
 .precios .header .logotipo {
   margin: 50px 0;
 }
-
 .button {
   border-radius: 12px;
   border: none;
-  background: var(--co-darkred);
+  background: #fd324e;
   color: white;
   padding: 7px 12px;
   font-size: 18px;
-  background: linear-gradient(to left, var(--co-darkred), var(--co-ligthred));
+  background: linear-gradient(to left, #fd324e, #ff7250);
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 20px;
   display: inline-block;
 }
-
 .titulo {
   font-size: 70px;
   margin-bottom: 20px;
   line-height: 70px;
   margin-top: 0;
-  span {
+}
+.titulo span {
     text-decoration: underline;
   }
-}
-
-.tipo {
-  &-a, &-b {
+.tipo-a, .tipo-b {
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
     margin-top: 0px;
   }
-}
-
 .guitarras {
-  color: var(--co-guitarra);
+  color: #1f313c;
   margin-bottom: 60px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   width: 100%;
-  h2 {
+}
+.guitarras h2 {
     font-size: 35px;
   }
-}
-
 .header {
   position: relative;
 }
-
-.header {
-  &.contenedor {
+.header.contenedor {
     position: static;
   }
-}
-
 .portada{
   color: white;
   padding: 20px;
-  background-color: var(--bgfondo)
+  background-color: #273b47
 
 }
-
 .menu {
   color: aliceblue;
   font-size: 24px;
   display: inline-block;
   right: 0;
-  li {
+}
+.menu li {
     display: inline-block;
     margin-left: 30px;
-    &:before {
+  }
+.menu li:before {
       content: "⦿";
       font-size: 20px;
       line-height: 12px;
@@ -149,159 +178,136 @@ textarea {
       font-weight: bold;
       margin-right: 10px;
     }
-  }
-   a {
+.menu a {
     color: aliceblue;
     text-decoration: none;
   }
-}
-
-
 .logotipo {
   display: inline-block;
   margin: 0;
 }
-
 .rigth {
   float: right;
   position: relative;
   top: -164px;
 }
-
 .left {
   float: left;
   position: relative;
   top: 30px;
 }
-
 .guitarra {
   /* overflow: hidden; */
-  border: 1px solid var(--co-guitarra);
+  border: 1px solid #1f313c;
   padding: 10px;
   margin: 10px 10px 40px 10px;
   border-radius: 10px;
 }
-
-.guitarra{
-  h3 {
+.guitarra h3 {
     margin-top: 30px;
     font-size: 30px;
   }
-  ol {
+.guitarra ol {
     padding: 0;
   }
-  &.b {
+.guitarra.b {
     height: 215px;
   }
-}
-
-.contenedor-guitarra{
-  &-a {
+.contenedor-guitarra-a {
     padding-left: 20px;
   }
-  &-b {
+.contenedor-guitarra-b {
     margin-left: 370px;
     padding-left: 20px;
     position: relative;
     bottom: 90px;
     height: 190px;
   }
-}
-
 .footer {
-  background: var(--bgfondo);
+  background: #273b47;
   padding: 50px;
-  flex-grow: 0;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
 }
-
 .contacto {
+  display: -webkit-box;
   display: flex;
   width: 300px;
   flex-wrap: wrap;
-  align-items: flex-start;
-
-  img {
+  -webkit-box-align: start;
+          align-items: flex-start;
+}
+.contacto img {
     display: block;
     height: 70px;
     margin-bottom: -20px;
   }
-}
-
-
-.contacto {
-  strong {
+.contacto strong {
     display: block;
   }
-
-  a {
+.contacto a {
     font-size: 13px;
     color: white;
     text-decoration: none;
     margin: 10px 10px 10px 0;
   }
-}
-
-.footer {
-  &.contenedor {
+.footer.contenedor {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
-}
-
 .formulario {
+  display: -webkit-box;
   display: flex;
   width: 420px;
   color: white;
   font-size: 13px;
 }
-
 .col1,
 .col2 {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 .col1 {
   margin-right: 15px;
 }
-
 .col2 {
-  align-items: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
 }
-
 .col2 .button {
   margin-top: 15px;
 }
-
 .intereses {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-
-  label {
+}
+.intereses label {
     font-size: 10px;
     width: 50%;
   }
-}
-
 .formulario label,
 .sexo,
 .intereses {
   margin-bottom: 10px;
 }
-
 .sexo {
   margin-top: 10px;
 }
-
 .tabla {
   margin: 50px 0;
 }
-
 .burger-buttom {
   width: 40px;
   border-radius: 50%;
   line-height: 40px;
   height: 40px;
-  background:  var(--bg-burger);
+  background:  #395667;
   text-align: center;
   left: 20px;
   top: 20px;
@@ -310,12 +316,11 @@ textarea {
   display: none;
   color: white;
   position: fixed;
-
-  &:hover {
-    transform: rotate(180deg);
-  }
 }
-
+.burger-buttom:hover {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 .video-wrapper {
   position: relative;
   padding-top: 56.25%; /* = (height(px)x100)/width(px)*/
@@ -329,12 +334,11 @@ textarea {
   height: 100%;
   width: 100%;
 }
-
 .video-demo {
   max-width: 600px;
   margin: 0 auto 70px;
 }
-
+/* footer  */
 @media screen and (max-width: 800px) {
   /* body {
     border: 10px solid red;
@@ -380,7 +384,6 @@ textarea {
     list-style: none;
   }
 }
-
 @media screen and (max-width: 767px) {
   .footer {
     /* border: 2px solid red; */
@@ -426,7 +429,6 @@ textarea {
     font-size: 16px;
   }
 }
-
 @media screen and (max-width: 710px) {
   .header {
     text-align: center;
@@ -445,23 +447,23 @@ textarea {
     padding: 0;
   }
 }
-
 @media screen and (max-width: 520px) {
   .header {
     position: static;
   }
   .menu {
-    background: rgba(255, 60, 88, 0.83);
+    background: #ff3c58;
+    background: rgba(255, 60, 88, .83);
     top: 0;
     left: -100%;
     bottom: 0;
     right: 0;
     z-index: 2;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     width: 100%;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
     transition: 0.3s;
     position: fixed;
     overflow: hidden;
@@ -472,7 +474,8 @@ textarea {
   }
 
   .menu ul {
-    flex: 1;
+    -webkit-box-flex: 1;
+            flex: 1;
   }
   .menu li {
     display: block;
@@ -484,7 +487,7 @@ textarea {
     border-top: 1px solid white;
   }
 
-  .menu li::before {
+  .menu li:before {
     display: none;
   }
   .portada {
@@ -492,7 +495,8 @@ textarea {
   }
 
   .portada div.contenedor {
-    align-items: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
   }
   .titulo {
     font-size: 35px;
@@ -519,8 +523,7 @@ textarea {
     margin: 0 10px;
   }
   .col2 {
-    align-items: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
   }
 }
-
-/* footer  */

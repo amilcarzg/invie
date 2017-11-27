@@ -1,37 +1,48 @@
-let gulp = require('gulp')
-let postcss = require('gulp-postcss')
-let cssnext = require('postcss-cssnext')
+let gulp = require("gulp");
+let postcss = require("gulp-postcss");
+let cssnext = require("postcss-cssnext");
 let mixins = require("postcss-mixins");
-let lost = require('lost')
-let aimport = require ('postcss-import')
-let csswring = require("csswring")
+let lost = require("lost");
+let aimport = require("postcss-import");
+let cssnested = require("postcss-nested");
+let csswring = require("csswring");
 let mqpacker = require("css-mqpacker");
-let browserSync = require('browser-sync')
+let browserSync = require("browser-sync");
+// let validator = require("postcss-validator");
 
-gulp.task('serve', ()=>{
-    browserSync.init({
-        server: {
-            baseDir: './dist'
-        }
-    })
-})
+gulp.task("serve", function() {
+  browserSync.init({
+    server: {
+      baseDir: "./dist"
+    }
+  });
+});
 
 // Tarea para procesar el CSS
-gulp.task('css', function () {
-  var processors = [aimport(), mixins(), cssnested, lost(),  cssnext(
-      { browsers: ["> 5%", "ie 8"] }
-    ), mqpacker(), csswring()];
+gulp.task("css", function() {
+  var processors = [
+    aimport(),
+    mixins(),
+    cssnested,
+    lost(),
+    cssnext({
+      browsers: ["> 5%", "ie 8"]
+    }),
+    mqpacker(),
+  ];
+  // csswring()
 
-  return gulp.src('./src/app.css')
+  return gulp
+    .src("./src/css/app.css")
     .pipe(postcss(processors))
-    .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream())
-})
+    .pipe(gulp.dest("./dist/css"))
+    .pipe(browserSync.stream());
+});
 
 // Tarea para vigilar los cambios
-gulp.task('watch', function () {
-  gulp.watch('./src/**/*.css', ['css'])
-  gulp.watch('./dist/*.html').on('change', browserSync.reload)
-})
+gulp.task("watch", function() {
+  gulp.watch("./src/**/*.css", ["css"]);
+  gulp.watch("./dist/*.html").on("change", browserSync.reload);
+});
 
-gulp.task('default', ['watch', 'serve'])
+gulp.task("default", ["watch", "serve"]);
