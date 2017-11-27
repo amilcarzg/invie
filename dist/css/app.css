@@ -157,9 +157,12 @@ textarea {
 .portada{
   color: white;
   padding: 20px;
-  background-color: #273b47
-
+  background-color: #273b47;
 }
+.portada div.contenedor {
+    -webkit-box-align: stretch;
+            align-items: stretch;
+  }
 .menu {
   color: aliceblue;
   font-size: 24px;

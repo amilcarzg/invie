@@ -129,8 +129,11 @@ textarea {
 .portada{
   color: white;
   padding: 20px;
-  background-color: var(--bgfondo)
+  background-color: var(--bgfondo);
 
+  div.contenedor {
+    align-items: stretch;
+  }
 }
 
 .menu {
