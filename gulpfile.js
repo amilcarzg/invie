@@ -7,8 +7,8 @@ let aimport = require("postcss-import");
 let cssnested = require("postcss-nested");
 let csswring = require("csswring");
 let mqpacker = require("css-mqpacker");
+let sortCssmq = require("sort-css-media-queries");
 let browserSync = require("browser-sync");
-// let validator = require("postcss-validator");
 
 gulp.task("serve", function() {
   browserSync.init({
@@ -28,7 +28,8 @@ gulp.task("css", function() {
     cssnext({
       browsers: ["> 5%", "ie 8"]
     }),
-    mqpacker(),
+    mqpacker({ sort: sortCssmq }),
+    csswring(),
   ];
   // csswring()
 
